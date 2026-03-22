@@ -6,10 +6,12 @@ __pycache__/
 dist/
 build/
 node_modules/
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
 .DS_Store
 backend/.env
 frontend/.env
 backend/.coverage
 backend/htmlcov/
 *.log
-
