@@ -1,42 +1,117 @@
 # 多 Agent 电商运营智能助手平台
 
-一个面向电商运营场景的多 Agent AI 应用 MVP，支持商品问答、活动文案生成、客服辅助回复、评论摘要、竞品整理和运营日报生成。项目采用前后端分离 monorepo 结构，后端使用 FastAPI + LangGraph，前端使用 React + Vite，并内置 mock 数据和 mock LLM 降级模式，保证没有真实电商 API、没有 Redis/MySQL、没有模型 Key 时也能跑通演示。
+<p align="center">
+  <img src="./docs/assets/hero.svg" alt="project hero" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/free410/ecom-multi-agent-assistant/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/free410/ecom-multi-agent-assistant/ci.yml?branch=main&label=CI&style=for-the-badge" alt="ci badge" />
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python" />
+  <img src="https://img.shields.io/badge/FastAPI-LangGraph-111827?style=for-the-badge&logo=fastapi&logoColor=00C7B7" alt="fastapi langgraph" />
+  <img src="https://img.shields.io/badge/React-Vite-111827?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react vite" />
+  <img src="https://img.shields.io/badge/License-MIT-16A34A?style=for-the-badge" alt="mit license" />
+</p>
+
+<p align="center">
+  面向电商运营场景的多 Agent AI 应用 MVP，支持商品问答、活动文案生成、客服辅助回复、评论摘要、竞品整理与运营日报生成。
+</p>
+
+## 项目亮点
+
+- 基于 `LangGraph` 的有状态多 Agent 工作流，完整体现 `意图识别 -> 路由 -> 工具调用 -> 汇总输出`
+- 支持 `Qwen / DeepSeek / Mock` 三种 provider 路由，缺少 Key 时自动回退 mock 模式
+- 使用 `Redis` 存会话记忆与最近执行结果，`MySQL` 存商品、会话与任务日志
+- 后端使用 `FastAPI`，前端使用 `React + Vite + TypeScript`
+- 内置 `seed mock data`，无需真实电商 API 也能本地完整演示
+- 支持降级运行：MySQL / Redis 不可用时自动切换到内存模式
+- 仓库已配置 `GitHub Actions CI`，自动跑后端测试与前端构建
+
+## 仓库预览
+
+### Running UI Screenshot
+
+> 下面这张图来自项目本地运行后的真实页面截图，展示了模型切换、会话列表、Markdown 回答和执行链路面板。
+
+<p align="center">
+  <img src="./docs/assets/app-screenshot.png" alt="running app screenshot" width="100%" />
+</p>
+
+### UI Layout Illustration
+
+<p align="center">
+  <img src="./docs/assets/ui-preview.svg" alt="ui layout illustration" width="100%" />
+</p>
+
+### Workflow Overview
+
+<p align="center">
+  <img src="./docs/assets/workflow.svg" alt="workflow" width="100%" />
+</p>
+
+## 功能清单
+
+| 模块 | 能力 |
+| --- | --- |
+| 商品问答 | 根据商品卖点、适用人群、FAQ、售后规则组织回答 |
+| 活动文案生成 | 根据商品卖点、活动主题、人群定向生成促销文案 |
+| 客服辅助回复 | 对售后、物流、FAQ 类问题生成客服建议回复 |
+| 评论摘要 | 提取评论关键词、汇总情绪、总结问题 |
+| 竞品整理 | 对竞品卖点、价格带、弱点做结构化对比 |
+| 运营日报 | 根据任务执行结果和输入上下文输出日报 |
+| 执行可视化 | 返回 `intent / agent_path / used_tools / logs` 供前端展示 |
 
 ## 技术栈
 
-### 后端
+### Backend
+
 - Python 3.11
 - FastAPI
 - LangGraph
+- LangChain compatibility layer
 - SQLAlchemy
 - Pydantic
 - Redis
 - MySQL
 - Uvicorn
-- httpx
 
-### 前端
+### Frontend
+
 - React
 - Vite
 - TypeScript
 - Axios
 - React Markdown
-- 基础 CSS
+- CSS
 
-## 核心功能
+## 系统架构
 
-- 商品问答：根据商品卖点、适用人群、FAQ 和售后规则回答问题
-- 活动文案生成：根据活动主题和目标人群生成营销文案
-- 客服辅助回复：基于商品信息和售后规则生成回复建议
-- 评论摘要：总结最近评论、提取差评关键词、归纳问题
-- 竞品整理：对竞品信息进行结构化对比
-- 运营日报：根据输入上下文生成日报
-- 多 Agent 路由：IntentAgent -> 对应业务 Agent -> SummaryAgent
-- Tool Calling：所有业务先走工具层，再组织回答
-- Redis 记忆：保存会话历史和最近一次执行结果
-- MySQL 存储：保存商品、会话、任务日志
-- Provider 切换：支持 Qwen / DeepSeek / Mock
-- 降级运行：MySQL/Redis/真实模型不可用时自动切到内存或 mock 模式
+### Agent 角色
+
+1. `IntentAgent`
+   识别意图，提取商品名、活动主题、目标人群等上下文
+2. `ProductKnowledgeAgent`
+   处理商品问答和商品知识检索
+3. `ContentAgent`
+   处理活动文案和营销内容生成
+4. `SupportAgent`
+   处理客服回复建议
+5. `AnalysisAgent`
+   处理评论摘要、竞品整理、日报生成
+6. `SummaryAgent`
+   统一整理最终结构化输出
+
+### Tool Calling
+
+- `get_product_info(product_name)`
+- `search_product_faq(product_name, question)`
+- `summarize_reviews(product_name, days=7)`
+- `extract_negative_keywords(product_name, days=7)`
+- `generate_campaign_copy(product_name, campaign_theme, audience)`
+- `build_customer_reply(product_name, user_question)`
+- `compare_competitors(product_name)`
+- `generate_daily_report(input_context)`
 
 ## 目录结构
 
@@ -65,37 +140,25 @@ ecom-multi-agent-assistant/
       types/
       App.tsx
       main.tsx
-      styles.css
     package.json
-  .env.example
+  docs/
+    assets/
+  .github/
+    workflows/
   docker-compose.yml
+  .env.example
+  LICENSE
   README.md
 ```
-
-## 多 Agent 工作流
-
-系统基于 LangGraph 状态工作流运行，主链路如下：
-
-1. `ContextLoader`
-   读取 Redis 或内存中的会话历史
-2. `IntentAgent`
-   识别用户意图，提取商品名、活动主题、人群等上下文
-3. 路由到对应 Agent
-   - `ProductKnowledgeAgent`
-   - `ContentAgent`
-   - `SupportAgent`
-   - `AnalysisAgent`
-4. 工具调用
-   先调用商品、评论、竞品、日报等工具函数，获得结构化结果
-5. `SummaryAgent`
-   汇总 intent、agent_path、used_tools、logs 和最终回答
 
 ## API 设计
 
 ### `GET /api/health`
-返回服务健康状态、数据库状态和 Redis 状态。
+
+返回服务健康状态、MySQL 状态和 Redis 状态。
 
 ### `POST /api/chat`
+
 请求示例：
 
 ```json
@@ -121,20 +184,33 @@ ecom-multi-agent-assistant/
 ```
 
 ### `GET /api/session/{session_id}`
+
 返回会话历史和最近一次执行结果。
 
 ### `GET /api/sessions`
+
 返回历史会话列表。
 
 ### `GET /api/products`
-返回内置商品列表。
+
+返回内置 mock 商品列表。
 
 ### `POST /api/seed/init`
-初始化商品、评论、竞品 mock 数据。
 
-## 环境变量
+初始化 mock 商品、评论和竞品数据。
 
-根目录创建 `.env`，可参考 `.env.example`：
+## 快速开始
+
+### 1. 克隆仓库
+
+```bash
+git clone https://github.com/free410/ecom-multi-agent-assistant.git
+cd ecom-multi-agent-assistant
+```
+
+### 2. 配置环境变量
+
+复制 `.env.example` 为 `.env`，按需填写：
 
 ```env
 BACKEND_HOST=0.0.0.0
@@ -152,23 +228,15 @@ DEFAULT_PROVIDER=mock
 VITE_API_BASE_URL=http://localhost:8000/api
 ```
 
-### Provider 切换规则
+### 3. 启动可选依赖服务
 
-- 显式选择 `mock` 时，直接使用 mock 模式
-- 选择 `qwen` 或 `deepseek` 但缺少 `api_key` / `base_url` 时，自动回退 `mock`
-- 远程模型调用失败时，也会自动回退 `mock`
-
-## 启动方式
-
-### 1. 启动可选依赖服务
-
-如果本地没有 MySQL / Redis，先执行：
+如果本地没有 MySQL / Redis：
 
 ```bash
 docker compose up -d
 ```
 
-### 2. 启动后端
+### 4. 启动后端
 
 ```bash
 cd backend
@@ -178,11 +246,12 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-后端启动后：
-- 文档地址：`http://localhost:8000/docs`
-- 健康检查：`http://localhost:8000/api/health`
+后端地址：
 
-### 3. 启动前端
+- API Docs: `http://localhost:8000/docs`
+- Health Check: `http://localhost:8000/api/health`
+
+### 5. 启动前端
 
 ```bash
 cd frontend
@@ -192,60 +261,69 @@ npm run dev
 
 前端地址：
 
-```text
-http://localhost:5173
-```
+- App: `http://localhost:5173`
+- Demo Entry: `http://localhost:5173`
 
-首次打开页面时，前端会自动请求 `/api/seed/init` 初始化 mock 数据。
+首次打开页面时，前端会自动调用 `/api/seed/init` 初始化演示数据。
 
-## 主要演示问题
+## 演示问题
 
-可以直接在前端点击这些示例：
+你可以直接在页面中点击这些预置问题：
 
-- 根据云萃保温咖啡杯的卖点生成618促销文案
-- 总结云萃保温咖啡杯最近7天差评关键词
-- 针对云萃保温咖啡杯用户反馈“发货慢”生成客服回复建议
-- 整理云萃保温咖啡杯与竞品的差异
-- 生成今天的运营日报
+- `根据云萃保温咖啡杯的卖点生成618促销文案`
+- `总结云萃保温咖啡杯最近7天差评关键词`
+- `针对云萃保温咖啡杯用户反馈“发货慢”生成客服回复建议`
+- `整理云萃保温咖啡杯与竞品的差异`
+- `生成今天的运营日报`
 
 ## 数据与降级策略
 
-### 数据源
+### 内置数据
 
 - 商品：6 条
 - 评论：24 条
 - 竞品：4 条
-- 文件位置：`backend/app/seed/`
+- 数据位置：`backend/app/seed/`
 
 ### 降级行为
 
 - MySQL 不可用：自动切到内存存储
 - Redis 不可用：自动切到内存缓存
-- 模型 Key 不可用：自动切到 mock LLM
+- 模型 Key 不可用：自动切到 `mock_llm`
+- 远程模型失败：自动 fallback 到 mock 模式
 
-## 测试
+## 测试与 CI
 
-后端包含 5 条以上接口测试，运行方式：
+### 本地测试
+
+后端：
 
 ```bash
 cd backend
 pytest
 ```
 
-测试覆盖：
+前端构建：
 
-- 健康检查
-- seed 初始化
-- 商品列表
-- 文案生成路由
-- 评论分析路由
-- 会话详情查询
+```bash
+cd frontend
+npm run build
+```
 
-## 简历项目亮点
+### GitHub Actions
 
-- 使用 LangGraph 设计有状态多 Agent 工作流
-- 体现 Tool Calling、会话记忆、缓存和降级运行设计
-- 支持 OpenAI 兼容接口切换 Qwen / DeepSeek
-- 前端可视化展示 intent、agent_path、used_tools 和 logs
-- 不依赖真实业务 API，也能完整演示 AI 电商运营场景
+仓库已配置 `.github/workflows/ci.yml`：
 
+- `backend` job：安装依赖并运行 `pytest`
+- `frontend` job：安装依赖并执行 `npm run build`
+
+## 适合简历展示的点
+
+- 多 Agent 架构与状态图清晰，适合讲解 AI 应用链路设计
+- 具备 Tool Calling、会话记忆、缓存、结构化日志与前端可视化
+- 兼顾工程性和演示性，支持没有业务 API 时的完整本地 Demo
+- 前后端分离，具备基础测试和 CI，适合作为 AI 应用开发实习作品
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

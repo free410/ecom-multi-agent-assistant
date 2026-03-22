@@ -1,0 +1,47 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" rx="32" fill="#F5F8FF"/>
+  <rect x="32" y="32" width="1216" height="576" rx="28" fill="url(#paint0_linear)"/>
+  <circle cx="1092" cy="148" r="148" fill="#DCE8FF"/>
+  <circle cx="1118" cy="172" r="86" fill="#BED2FF"/>
+  <circle cx="180" cy="510" r="120" fill="#E8F0FF"/>
+  <rect x="88" y="104" width="620" height="48" rx="24" fill="#0F172A" fill-opacity="0.08"/>
+  <text x="92" y="248" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700">
+    E-commerce Multi-Agent Assistant
+  </text>
+  <text x="92" y="300" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="500">
+    LangGraph workflow · Tool Calling · Redis memory · FastAPI · React
+  </text>
+  <text x="92" y="362" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    A portfolio-ready AI application for product QA, campaign copy, support replies,
+  </text>
+  <text x="92" y="398" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    review insights, competitor analysis, and daily e-commerce operations reports.
+  </text>
+  <rect x="92" y="454" width="202" height="52" rx="18" fill="#1E5EFF"/>
+  <text x="132" y="487" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">
+    MVP Ready
+  </text>
+  <rect x="742" y="110" width="434" height="360" rx="26" fill="white" fill-opacity="0.94"/>
+  <rect x="774" y="146" width="162" height="24" rx="12" fill="#1E5EFF" fill-opacity="0.14"/>
+  <rect x="948" y="146" width="96" height="24" rx="12" fill="#DCE8FF"/>
+  <rect x="1058" y="146" width="86" height="24" rx="12" fill="#DCE8FF"/>
+  <rect x="774" y="194" width="120" height="120" rx="22" fill="#EFF6FF"/>
+  <rect x="914" y="194" width="230" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="914" y="224" width="188" height="14" rx="7" fill="#E2E8F0"/>
+  <rect x="914" y="250" width="200" height="14" rx="7" fill="#E2E8F0"/>
+  <rect x="914" y="286" width="140" height="36" rx="12" fill="#1E5EFF"/>
+  <rect x="774" y="338" width="370" height="94" rx="18" fill="#F8FAFC"/>
+  <rect x="798" y="362" width="118" height="16" rx="8" fill="#94A3B8"/>
+  <rect x="798" y="390" width="310" height="14" rx="7" fill="#CBD5E1"/>
+  <rect x="798" y="414" width="264" height="14" rx="7" fill="#CBD5E1"/>
+  <rect x="804" y="496" width="126" height="68" rx="18" fill="#0F172A"/>
+  <rect x="950" y="496" width="126" height="68" rx="18" fill="#1E5EFF"/>
+  <rect x="1096" y="496" width="48" height="68" rx="18" fill="#DCE8FF"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="62" y1="60" x2="1184" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF1FF"/>
+    </linearGradient>
+  </defs>
+</svg>
+

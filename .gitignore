@@ -1,4 +1,5 @@
 .venv/
+backend/.venv/
 __pycache__/
 *.pyc
 .pytest_cache/
@@ -6,6 +7,7 @@ __pycache__/
 dist/
 build/
 node_modules/
+frontend/dist/
 *.tsbuildinfo
 frontend/vite.config.js
 frontend/vite.config.d.ts
