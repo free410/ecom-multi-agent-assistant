@@ -1,0 +1,27 @@
+[
+  {"product_id": 1, "content": "保温效果不错，早上装的咖啡中午还是热的。", "rating": 5, "created_at": "2026-03-21"},
+  {"product_id": 1, "content": "颜值高，拿着很轻，通勤很方便。", "rating": 5, "created_at": "2026-03-20"},
+  {"product_id": 1, "content": "杯盖有点紧，第一次打开费劲。", "rating": 3, "created_at": "2026-03-19"},
+  {"product_id": 1, "content": "发货慢了两天，送人差点来不及。", "rating": 2, "created_at": "2026-03-18"},
+  {"product_id": 2, "content": "打香蕉奶昔很快，清洗也方便。", "rating": 5, "created_at": "2026-03-21"},
+  {"product_id": 2, "content": "无线设计适合办公室，随手就能做果汁。", "rating": 4, "created_at": "2026-03-20"},
+  {"product_id": 2, "content": "续航一般，重度使用要经常充电。", "rating": 3, "created_at": "2026-03-19"},
+  {"product_id": 2, "content": "物流包装一般，到手盒子有压痕。", "rating": 2, "created_at": "2026-03-17"},
+  {"product_id": 3, "content": "睡了几晚脖子轻松很多，支撑感好。", "rating": 5, "created_at": "2026-03-21"},
+  {"product_id": 3, "content": "枕套透气，侧睡也比较舒服。", "rating": 4, "created_at": "2026-03-20"},
+  {"product_id": 3, "content": "刚开始有点硬，适应了两天才好。", "rating": 3, "created_at": "2026-03-19"},
+  {"product_id": 3, "content": "包装有点简陋，送礼不够体面。", "rating": 2, "created_at": "2026-03-16"},
+  {"product_id": 4, "content": "露营氛围感很足，续航也比想象中好。", "rating": 5, "created_at": "2026-03-21"},
+  {"product_id": 4, "content": "放家里阳台也很好看，亮度够用。", "rating": 4, "created_at": "2026-03-20"},
+  {"product_id": 4, "content": "充电口的防水塞有点松。", "rating": 3, "created_at": "2026-03-19"},
+  {"product_id": 4, "content": "说明书不够详细，第一次上手有点迷糊。", "rating": 2, "created_at": "2026-03-18"},
+  {"product_id": 5, "content": "风力比想象中大，办公室用很舒服。", "rating": 5, "created_at": "2026-03-21"},
+  {"product_id": 5, "content": "低档比较安静，桌面不占地方。", "rating": 4, "created_at": "2026-03-20"},
+  {"product_id": 5, "content": "塑料感有点强，但价格还能接受。", "rating": 3, "created_at": "2026-03-19"},
+  {"product_id": 5, "content": "收到时外壳有轻微划痕。", "rating": 2, "created_at": "2026-03-17"},
+  {"product_id": 6, "content": "泡水果茶很好看，放冰箱也顺手。", "rating": 5, "created_at": "2026-03-21"},
+  {"product_id": 6, "content": "玻璃质感不错，清洗很方便。", "rating": 4, "created_at": "2026-03-20"},
+  {"product_id": 6, "content": "容量对多人家庭还是偏小。", "rating": 3, "created_at": "2026-03-19"},
+  {"product_id": 6, "content": "物流途中有磕碰，还好客服补发很快。", "rating": 2, "created_at": "2026-03-18"}
+]
+
