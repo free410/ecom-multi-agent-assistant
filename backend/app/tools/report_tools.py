@@ -1,7 +1,17 @@
 from typing import Any
 
+from app.tools.tool_response import build_tool_response
+
 
 def generate_daily_report(input_context: dict[str, Any]) -> dict[str, Any]:
+    return build_tool_response(
+        tool_name="generate_daily_report",
+        tool_input=input_context,
+        executor=lambda: _generate_daily_report_impl(input_context),
+    )
+
+
+def _generate_daily_report_impl(input_context: dict[str, Any]) -> dict[str, Any]:
     sales = input_context.get("sales", 0)
     traffic = input_context.get("traffic", 0)
     conversion_rate = input_context.get("conversion_rate", "0%")

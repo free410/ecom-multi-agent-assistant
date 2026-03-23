@@ -1,0 +1,41 @@
+<svg width="1600" height="760" viewBox="0 0 1600 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="760" rx="34" fill="#F4F8FF"/>
+  <text x="80" y="102" fill="#173454" font-size="44" font-weight="700">工具与数据层概览</text>
+  <text x="80" y="144" fill="#6A81A3" font-size="24">所有工具统一返回 success / tool_name / input / output / latency_ms / error</text>
+
+  <rect x="80" y="210" width="454" height="190" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="116" y="266" fill="#173454" font-size="30" font-weight="700">商品工具</text>
+  <text x="116" y="312" fill="#4B6487" font-size="22">• get_product_info</text>
+  <text x="116" y="346" fill="#4B6487" font-size="22">• search_product_faq</text>
+  <text x="116" y="380" fill="#4B6487" font-size="22">适用：商品问答、客服辅助、文案准备</text>
+
+  <rect x="572" y="210" width="454" height="190" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="608" y="266" fill="#173454" font-size="30" font-weight="700">分析工具</text>
+  <text x="608" y="312" fill="#4B6487" font-size="22">• summarize_reviews</text>
+  <text x="608" y="346" fill="#4B6487" font-size="22">• extract_negative_keywords</text>
+  <text x="608" y="380" fill="#4B6487" font-size="22">适用：评论摘要、差评问题定位</text>
+
+  <rect x="1064" y="210" width="454" height="190" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1100" y="266" fill="#173454" font-size="30" font-weight="700">生成工具</text>
+  <text x="1100" y="312" fill="#4B6487" font-size="22">• generate_campaign_copy</text>
+  <text x="1100" y="346" fill="#4B6487" font-size="22">• build_customer_reply</text>
+  <text x="1100" y="380" fill="#4B6487" font-size="22">适用：营销内容与客服话术生成</text>
+
+  <rect x="80" y="442" width="454" height="190" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="116" y="498" fill="#173454" font-size="30" font-weight="700">对比与报告工具</text>
+  <text x="116" y="544" fill="#4B6487" font-size="22">• compare_competitors</text>
+  <text x="116" y="578" fill="#4B6487" font-size="22">• generate_daily_report</text>
+  <text x="116" y="612" fill="#4B6487" font-size="22">适用：竞品整理、运营日报输出</text>
+
+  <rect x="572" y="442" width="454" height="190" rx="26" fill="#173454"/>
+  <text x="608" y="498" fill="#FFFFFF" font-size="30" font-weight="700">数据来源</text>
+  <text x="608" y="544" fill="#DCE8FF" font-size="22">• 12 条商品</text>
+  <text x="608" y="578" fill="#DCE8FF" font-size="22">• 60+ 条评论</text>
+  <text x="608" y="612" fill="#DCE8FF" font-size="22">• 8 条竞品资料</text>
+
+  <rect x="1064" y="442" width="454" height="190" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1100" y="498" fill="#173454" font-size="30" font-weight="700">运行特性</text>
+  <text x="1100" y="544" fill="#4B6487" font-size="22">• MySQL / Redis 不可用时优雅降级</text>
+  <text x="1100" y="578" fill="#4B6487" font-size="22">• Qwen / DeepSeek / Mock 可切换</text>
+  <text x="1100" y="612" fill="#4B6487" font-size="22">• 前端可查看本轮工具调用与耗时</text>
+</svg>

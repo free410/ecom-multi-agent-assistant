@@ -1,47 +1,49 @@
-<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1280" height="640" rx="32" fill="#F5F8FF"/>
-  <rect x="32" y="32" width="1216" height="576" rx="28" fill="url(#paint0_linear)"/>
-  <circle cx="1092" cy="148" r="148" fill="#DCE8FF"/>
-  <circle cx="1118" cy="172" r="86" fill="#BED2FF"/>
-  <circle cx="180" cy="510" r="120" fill="#E8F0FF"/>
-  <rect x="88" y="104" width="620" height="48" rx="24" fill="#0F172A" fill-opacity="0.08"/>
-  <text x="92" y="248" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700">
-    E-commerce Multi-Agent Assistant
-  </text>
-  <text x="92" y="300" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="500">
-    LangGraph workflow · Tool Calling · Redis memory · FastAPI · React
-  </text>
-  <text x="92" y="362" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="24">
-    A portfolio-ready AI application for product QA, campaign copy, support replies,
-  </text>
-  <text x="92" y="398" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="24">
-    review insights, competitor analysis, and daily e-commerce operations reports.
-  </text>
-  <rect x="92" y="454" width="202" height="52" rx="18" fill="#1E5EFF"/>
-  <text x="132" y="487" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">
-    MVP Ready
-  </text>
-  <rect x="742" y="110" width="434" height="360" rx="26" fill="white" fill-opacity="0.94"/>
-  <rect x="774" y="146" width="162" height="24" rx="12" fill="#1E5EFF" fill-opacity="0.14"/>
-  <rect x="948" y="146" width="96" height="24" rx="12" fill="#DCE8FF"/>
-  <rect x="1058" y="146" width="86" height="24" rx="12" fill="#DCE8FF"/>
-  <rect x="774" y="194" width="120" height="120" rx="22" fill="#EFF6FF"/>
-  <rect x="914" y="194" width="230" height="18" rx="9" fill="#CBD5E1"/>
-  <rect x="914" y="224" width="188" height="14" rx="7" fill="#E2E8F0"/>
-  <rect x="914" y="250" width="200" height="14" rx="7" fill="#E2E8F0"/>
-  <rect x="914" y="286" width="140" height="36" rx="12" fill="#1E5EFF"/>
-  <rect x="774" y="338" width="370" height="94" rx="18" fill="#F8FAFC"/>
-  <rect x="798" y="362" width="118" height="16" rx="8" fill="#94A3B8"/>
-  <rect x="798" y="390" width="310" height="14" rx="7" fill="#CBD5E1"/>
-  <rect x="798" y="414" width="264" height="14" rx="7" fill="#CBD5E1"/>
-  <rect x="804" y="496" width="126" height="68" rx="18" fill="#0F172A"/>
-  <rect x="950" y="496" width="126" height="68" rx="18" fill="#1E5EFF"/>
-  <rect x="1096" y="496" width="48" height="68" rx="18" fill="#DCE8FF"/>
+<svg width="1600" height="760" viewBox="0 0 1600 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="760" rx="36" fill="#F4F8FF"/>
+  <rect x="32" y="32" width="1536" height="696" rx="32" fill="url(#bg)"/>
+  <rect x="72" y="84" width="714" height="592" rx="28" fill="#FFFFFF" fill-opacity="0.9"/>
+  <text x="112" y="162" fill="#16304F" font-size="54" font-weight="700">多 Agent 电商运营智能助手平台</text>
+  <text x="112" y="214" fill="#5E7392" font-size="24">LangGraph · FastAPI · React · Redis / MySQL · Qwen / DeepSeek / Mock</text>
+
+  <rect x="112" y="258" width="182" height="48" rx="24" fill="#E7F0FF"/>
+  <text x="145" y="290" fill="#2F5BEA" font-size="22" font-weight="600">多 Agent 编排</text>
+  <rect x="310" y="258" width="168" height="48" rx="24" fill="#EAF8F1"/>
+  <text x="344" y="290" fill="#1B8F5A" font-size="22" font-weight="600">Tool Calling</text>
+  <rect x="494" y="258" width="164" height="48" rx="24" fill="#FFF1E3"/>
+  <text x="529" y="290" fill="#E08A17" font-size="22" font-weight="600">结构化输出</text>
+
+  <text x="112" y="362" fill="#1F3556" font-size="30" font-weight="700">核心能力</text>
+  <text x="112" y="414" fill="#304968" font-size="24">• 商品问答：基于商品卖点、FAQ 与售后规则回答问题</text>
+  <text x="112" y="458" fill="#304968" font-size="24">• 活动文案：按主题与人群定向生成营销文案</text>
+  <text x="112" y="502" fill="#304968" font-size="24">• 评论分析：提取差评关键词并输出运营建议</text>
+  <text x="112" y="546" fill="#304968" font-size="24">• 竞品整理：结构化对比亮点、弱项与价格带</text>
+  <text x="112" y="590" fill="#304968" font-size="24">• 运营日报：把任务结果沉淀为日报摘要</text>
+
+  <rect x="848" y="92" width="664" height="180" rx="28" fill="#173454"/>
+  <text x="892" y="152" fill="#FFFFFF" font-size="30" font-weight="700">演示视角</text>
+  <text x="892" y="196" fill="#D8E7FF" font-size="22">前端可直接看到：</text>
+  <text x="892" y="232" fill="#D8E7FF" font-size="22">意图、置信度、路由原因、执行路径、已用工具、工具耗时</text>
+
+  <rect x="848" y="300" width="316" height="164" rx="24" fill="#FFFFFF" fill-opacity="0.95"/>
+  <text x="884" y="352" fill="#173454" font-size="26" font-weight="700">执行链路</text>
+  <text x="884" y="394" fill="#536B8B" font-size="22">ContextLoader</text>
+  <text x="884" y="426" fill="#536B8B" font-size="22">→ IntentAgent</text>
+  <text x="884" y="458" fill="#536B8B" font-size="22">→ ContentAgent</text>
+
+  <rect x="1196" y="300" width="316" height="164" rx="24" fill="#FFFFFF" fill-opacity="0.95"/>
+  <text x="1232" y="352" fill="#173454" font-size="26" font-weight="700">工具状态</text>
+  <text x="1232" y="394" fill="#536B8B" font-size="22">generate_campaign_copy</text>
+  <text x="1232" y="426" fill="#536B8B" font-size="22">summarize_reviews</text>
+  <text x="1232" y="458" fill="#536B8B" font-size="22">compare_competitors</text>
+
+  <rect x="848" y="500" width="664" height="152" rx="24" fill="#FFFFFF" fill-opacity="0.95"/>
+  <text x="892" y="552" fill="#173454" font-size="26" font-weight="700">适合简历展示</text>
+  <text x="892" y="594" fill="#536B8B" font-size="22">完整覆盖：模型接入、工作流编排、工具调用、会话记忆、前端可视化。</text>
+
   <defs>
-    <linearGradient id="paint0_linear" x1="62" y1="60" x2="1184" y2="580" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#EAF1FF"/>
+    <linearGradient id="bg" x1="32" y1="32" x2="1568" y2="728" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF1FF"/>
+      <stop offset="1" stop-color="#F8FBFF"/>
     </linearGradient>
   </defs>
 </svg>
-

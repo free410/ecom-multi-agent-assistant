@@ -1,49 +1,47 @@
-<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="620" rx="28" fill="#F8FAFC"/>
-  <text x="56" y="72" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">
-    LangGraph Workflow
-  </text>
-  <text x="56" y="108" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="20">
-    Context-aware routing from intent recognition to tool usage and structured response.
-  </text>
+<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="720" rx="32" fill="#F5F8FF"/>
+  <text x="80" y="100" fill="#173454" font-size="44" font-weight="700">多 Agent 工作流</text>
+  <text x="80" y="142" fill="#6A81A3" font-size="24">通过 LangGraph 将意图识别、路由、工具调用和结果汇总串成完整链路</text>
 
-  <rect x="70" y="180" width="190" height="110" rx="24" fill="#0F172A"/>
-  <text x="108" y="228" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">ContextLoader</text>
-  <text x="108" y="260" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="16">Redis / memory history</text>
+  <rect x="80" y="222" width="220" height="120" rx="28" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="112" y="276" fill="#173454" font-size="28" font-weight="700">1. 上下文加载</text>
+  <text x="112" y="314" fill="#4B6487" font-size="20">会话历史</text>
+  <text x="112" y="340" fill="#4B6487" font-size="20">短期记忆 / 偏好记忆</text>
 
-  <rect x="330" y="180" width="190" height="110" rx="24" fill="#1E5EFF"/>
-  <text x="384" y="228" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">IntentAgent</text>
-  <text x="374" y="260" fill="#DBEAFE" font-family="Segoe UI, Arial, sans-serif" font-size="16">intent + slots</text>
+  <rect x="360" y="222" width="220" height="120" rx="28" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="392" y="276" fill="#173454" font-size="28" font-weight="700">2. 意图识别</text>
+  <text x="392" y="314" fill="#4B6487" font-size="20">IntentAgent</text>
+  <text x="392" y="340" fill="#4B6487" font-size="20">confidence / routing_reason</text>
 
-  <rect x="612" y="84" width="220" height="88" rx="22" fill="#EFF6FF" stroke="#93C5FD"/>
-  <text x="654" y="133" fill="#1E3A8A" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">ProductKnowledge</text>
+  <rect x="640" y="164" width="260" height="96" rx="26" fill="#EAF1FF" stroke="#C7D8FB"/>
+  <text x="678" y="220" fill="#2F5BEA" font-size="24" font-weight="700">需要补充信息</text>
+  <rect x="640" y="294" width="260" height="96" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="690" y="350" fill="#173454" font-size="24" font-weight="700">商品问答</text>
+  <rect x="640" y="424" width="260" height="96" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="690" y="480" fill="#173454" font-size="24" font-weight="700">活动文案</text>
 
-  <rect x="612" y="196" width="220" height="88" rx="22" fill="#EFF6FF" stroke="#93C5FD"/>
-  <text x="675" y="246" fill="#1E3A8A" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">ContentAgent</text>
+  <rect x="960" y="164" width="260" height="96" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1014" y="220" fill="#173454" font-size="24" font-weight="700">客服回复</text>
+  <rect x="960" y="294" width="260" height="96" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1014" y="350" fill="#173454" font-size="24" font-weight="700">评论分析</text>
+  <rect x="960" y="424" width="260" height="96" rx="26" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1014" y="480" fill="#173454" font-size="24" font-weight="700">竞品与日报</text>
 
-  <rect x="612" y="308" width="220" height="88" rx="22" fill="#EFF6FF" stroke="#93C5FD"/>
-  <text x="676" y="358" fill="#1E3A8A" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">SupportAgent</text>
+  <rect x="1280" y="222" width="240" height="120" rx="28" fill="#173454"/>
+  <text x="1320" y="276" fill="#FFFFFF" font-size="28" font-weight="700">SummaryAgent</text>
+  <text x="1320" y="314" fill="#DCE8FF" font-size="20">answer / structured_result</text>
+  <text x="1320" y="340" fill="#DCE8FF" font-size="20">logs / used_tools / path</text>
 
-  <rect x="612" y="420" width="220" height="88" rx="22" fill="#EFF6FF" stroke="#93C5FD"/>
-  <text x="671" y="470" fill="#1E3A8A" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">AnalysisAgent</text>
+  <path d="M300 282H340" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M580 282H620" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M900 212H940" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M900 342H940" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M900 472H940" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1220 282H1260" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
 
-  <rect x="920" y="252" width="210" height="120" rx="24" fill="#0F172A"/>
-  <text x="971" y="305" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">SummaryAgent</text>
-  <text x="962" y="338" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="16">answer + logs + path</text>
+  <path d="M770 260V286" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M770 390V416" stroke="#8AA3C9" stroke-width="4" stroke-linecap="round"/>
 
-  <path d="M260 235H330" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
-  <path d="M520 235H560C580 235 580 128 612 128" stroke="#64748B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M520 235H612" stroke="#64748B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M520 235H560C580 235 580 352 612 352" stroke="#64748B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M520 235H560C580 235 580 464 612 464" stroke="#64748B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M832 128H878C896 128 896 312 920 312" stroke="#1E5EFF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M832 240H920" stroke="#1E5EFF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M832 352H920" stroke="#1E5EFF" stroke-width="6" stroke-linecap="round"/>
-  <path d="M832 464H878C896 464 896 312 920 312" stroke="#1E5EFF" stroke-width="6" stroke-linecap="round"/>
-
-  <rect x="72" y="520" width="1060" height="52" rx="18" fill="#E2E8F0"/>
-  <text x="96" y="552" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">
-    Tools: product info · FAQ search · campaign copy · customer reply · review summary · competitor compare · daily report
-  </text>
+  <text x="80" y="626" fill="#173454" font-size="26" font-weight="700">典型链路示例</text>
+  <text x="80" y="668" fill="#4B6487" font-size="22">“给我写一个文案” → ClarificationNode → “耳机” → ContentAgent → generate_campaign_copy → SummaryAgent</text>
 </svg>
-

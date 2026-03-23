@@ -75,12 +75,56 @@ class RedisStore:
     def get_last_result(self, session_id: str) -> dict[str, Any] | None:
         return self.get_json(f"session:{session_id}:last_result", default=None)
 
+    def get_short_term_memory(self, session_id: str) -> dict[str, Any]:
+        return self.get_json(f"session:{session_id}:short_term_memory", default={}) or {}
+
+    def set_short_term_memory(self, session_id: str, memory: dict[str, Any]) -> None:
+        self.set_json(
+            f"session:{session_id}:short_term_memory",
+            memory,
+            expire_seconds=60 * 60 * 24 * 3,
+        )
+
+    def merge_short_term_memory(self, session_id: str, updates: dict[str, Any]) -> dict[str, Any]:
+        current = self.get_short_term_memory(session_id)
+        merged = {**current, **{key: value for key, value in updates.items() if value is not None}}
+        self.set_short_term_memory(session_id, merged)
+        return merged
+
+    def get_preference_memory(self, session_id: str) -> dict[str, Any]:
+        return self.get_json(f"session:{session_id}:preference_memory", default={}) or {}
+
+    def set_preference_memory(self, session_id: str, memory: dict[str, Any]) -> None:
+        self.set_json(
+            f"session:{session_id}:preference_memory",
+            memory,
+            expire_seconds=60 * 60 * 24 * 30,
+        )
+
+    def merge_preference_memory(self, session_id: str, updates: dict[str, Any]) -> dict[str, Any]:
+        current = self.get_preference_memory(session_id)
+        merged = {**current, **{key: value for key, value in updates.items() if value is not None}}
+        self.set_preference_memory(session_id, merged)
+        return merged
+
+    def delete_session_data(self, session_id: str) -> None:
+        keys = [
+            f"session:{session_id}:history",
+            f"session:{session_id}:last_result",
+            f"session:{session_id}:short_term_memory",
+            f"session:{session_id}:preference_memory",
+        ]
+        if self.available and self.client is not None:
+            self.client.delete(*keys)
+            return
+        for key in keys:
+            self._memory_store.pop(key, None)
+
     def status(self) -> dict[str, Any]:
         return {
             "available": self.available,
-            "message": "ok" if self.available else self.error_message,
+            "message": "ok" if self.available else (self.error_message or "Redis not initialized."),
         }
 
 
 redis_store = RedisStore()
-

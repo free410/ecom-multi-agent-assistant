@@ -1,0 +1,66 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="980" rx="34" fill="#F3F7FF"/>
+  <rect x="28" y="28" width="1544" height="924" rx="28" fill="#FFFFFF"/>
+
+  <rect x="52" y="52" width="1496" height="108" rx="24" fill="#F5F8FF"/>
+  <text x="84" y="110" fill="#173454" font-size="42" font-weight="700">多 Agent 电商运营智能助手平台</text>
+  <text x="84" y="144" fill="#6980A2" font-size="22">支持商品问答、活动文案、客服回复、评论分析、竞品整理与运营日报</text>
+  <rect x="1288" y="74" width="120" height="52" rx="16" fill="#FFFFFF" stroke="#DCE6F8"/>
+  <text x="1328" y="108" fill="#173454" font-size="22" font-weight="600">Qwen</text>
+  <rect x="1426" y="74" width="96" height="52" rx="16" fill="#EAF1FF"/>
+  <text x="1453" y="108" fill="#2F5BEA" font-size="22" font-weight="600">会话</text>
+
+  <rect x="52" y="184" width="248" height="732" rx="24" fill="#FAFCFF" stroke="#DCE6F8"/>
+  <text x="82" y="238" fill="#173454" font-size="34" font-weight="700">会话列表</text>
+  <rect x="82" y="274" width="188" height="96" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="102" y="316" fill="#173454" font-size="24" font-weight="700">逐光护眼台灯文案</text>
+  <text x="102" y="348" fill="#6C81A0" font-size="20">campaign_copy</text>
+  <rect x="82" y="386" width="188" height="96" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="102" y="428" fill="#173454" font-size="24" font-weight="700">榨汁杯差评总结</text>
+  <text x="102" y="460" fill="#6C81A0" font-size="20">review_summary</text>
+
+  <rect x="324" y="184" width="926" height="732" rx="24" fill="#FFFFFF" stroke="#DCE6F8"/>
+  <text x="356" y="238" fill="#173454" font-size="34" font-weight="700">聊天区</text>
+
+  <rect x="988" y="274" width="222" height="84" rx="22" fill="#EAF1FF"/>
+  <text x="1020" y="316" fill="#173454" font-size="22">给我生成耳机促销文案</text>
+
+  <rect x="356" y="382" width="694" height="170" rx="22" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="388" y="426" fill="#7B8FAE" font-size="18">AI</text>
+  <text x="388" y="466" fill="#173454" font-size="26" font-weight="700">活动文案</text>
+  <text x="388" y="506" fill="#344B69" font-size="22">标题：限时活动限定｜耳机让通勤场景更轻松。</text>
+  <text x="388" y="540" fill="#344B69" font-size="22">卖点：佩戴舒适、连接稳定、适合学生与上班族。</text>
+
+  <rect x="356" y="578" width="862" height="156" rx="22" fill="#FAFCFF" stroke="#D6E2F8"/>
+  <text x="388" y="622" fill="#173454" font-size="30" font-weight="700">结构化结果</text>
+  <rect x="388" y="646" width="122" height="54" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="418" y="680" fill="#173454" font-size="20" font-weight="600">标题卡</text>
+  <rect x="526" y="646" width="122" height="54" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="556" y="680" fill="#173454" font-size="20" font-weight="600">卖点卡</text>
+  <rect x="664" y="646" width="122" height="54" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="694" y="680" fill="#173454" font-size="20" font-weight="600">CTA 卡</text>
+
+  <rect x="356" y="760" width="862" height="128" rx="22" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="388" y="812" fill="#8AA0BF" font-size="24">输入你的问题，例如：总结这款产品最近 7 天差评关键词</text>
+  <rect x="1084" y="790" width="104" height="64" rx="18" fill="#2F5BEA"/>
+  <text x="1116" y="832" fill="#FFFFFF" font-size="24" font-weight="700">发送</text>
+
+  <rect x="1274" y="184" width="274" height="732" rx="24" fill="#FAFCFF" stroke="#DCE6F8"/>
+  <text x="1304" y="238" fill="#173454" font-size="34" font-weight="700">执行面板</text>
+  <text x="1304" y="294" fill="#6C81A0" font-size="22">意图</text>
+  <rect x="1304" y="314" width="214" height="54" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1362" y="348" fill="#173454" font-size="22" font-weight="600">活动文案</text>
+  <text x="1304" y="404" fill="#6C81A0" font-size="22">执行路径</text>
+  <rect x="1304" y="424" width="214" height="126" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1326" y="462" fill="#173454" font-size="20">1 上下文加载</text>
+  <text x="1326" y="494" fill="#173454" font-size="20">2 意图识别</text>
+  <text x="1326" y="526" fill="#173454" font-size="20">3 内容生成</text>
+  <text x="1304" y="592" fill="#6C81A0" font-size="22">本轮工具</text>
+  <rect x="1304" y="612" width="214" height="112" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1326" y="650" fill="#173454" font-size="20">generate_campaign_copy</text>
+  <text x="1326" y="684" fill="#4F6C91" font-size="18">状态：成功 · 耗时：18ms</text>
+  <text x="1304" y="766" fill="#6C81A0" font-size="22">路由原因</text>
+  <rect x="1304" y="786" width="214" height="84" rx="18" fill="#FFFFFF" stroke="#D6E2F8"/>
+  <text x="1326" y="822" fill="#173454" font-size="18">命中文案关键词，并识别到</text>
+  <text x="1326" y="848" fill="#173454" font-size="18">类目主体“耳机”</text>
+</svg>

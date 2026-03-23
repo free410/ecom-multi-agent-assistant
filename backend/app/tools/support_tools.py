@@ -3,18 +3,32 @@ from typing import Any
 from sqlalchemy.orm import Session
 
 from app.tools.product_tools import get_product_info, search_product_faq
+from app.tools.tool_response import build_tool_response
 
 
 def build_customer_reply(product_name: str, user_question: str, db: Session | None = None) -> dict[str, Any]:
+    return build_tool_response(
+        tool_name="build_customer_reply",
+        tool_input={"product_name": product_name, "user_question": user_question},
+        executor=lambda: _build_customer_reply_impl(product_name, user_question, db=db),
+    )
+
+
+def _build_customer_reply_impl(
+    product_name: str,
+    user_question: str,
+    db: Session | None = None,
+) -> dict[str, Any]:
     product_result = get_product_info(product_name, db=db)
     if not product_result["found"]:
-        return product_result
+        return {
+            "found": False,
+            "message": product_result.get("message", f"未找到商品：{product_name}"),
+        }
 
     faq_result = search_product_faq(product_name, user_question, db=db)
     product = product_result["product"]
-    answer = (
-        f"您好，关于您提到的“{user_question}”，我们已经帮您核对 {product['name']} 的信息。"
-    )
+    answer = f"您好，关于您提到的“{user_question}”，我们已经帮您核对 {product['name']} 的信息。"
     if faq_result.get("matched") and faq_result.get("faq"):
         answer += f" 官方建议是：{faq_result['faq']['answer']}"
     else:
@@ -23,9 +37,9 @@ def build_customer_reply(product_name: str, user_question: str, db: Session | No
 
     return {
         "found": True,
+        "source": product_result.get("source", "seed"),
         "product_name": product["name"],
         "user_question": user_question,
         "faq_hit": faq_result.get("matched", False),
         "reply": answer,
     }
-

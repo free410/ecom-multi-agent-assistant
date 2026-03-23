@@ -3,6 +3,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from app.services.seed_service import seed_service
+from app.tools.tool_response import build_tool_response
 
 
 NEGATIVE_KEYWORD_CANDIDATES = [
@@ -36,6 +37,14 @@ def _recent_reviews(product_name: str, days: int) -> tuple[dict[str, Any] | None
 
 
 def summarize_reviews(product_name: str, days: int = 7) -> dict[str, Any]:
+    return build_tool_response(
+        tool_name="summarize_reviews",
+        tool_input={"product_name": product_name, "days": days},
+        executor=lambda: _summarize_reviews_impl(product_name, days),
+    )
+
+
+def _summarize_reviews_impl(product_name: str, days: int = 7) -> dict[str, Any]:
     product, reviews = _recent_reviews(product_name, days)
     if not product:
         return {"found": False, "message": f"未找到商品：{product_name}"}
@@ -64,6 +73,14 @@ def summarize_reviews(product_name: str, days: int = 7) -> dict[str, Any]:
 
 
 def extract_negative_keywords(product_name: str, days: int = 7) -> dict[str, Any]:
+    return build_tool_response(
+        tool_name="extract_negative_keywords",
+        tool_input={"product_name": product_name, "days": days},
+        executor=lambda: _extract_negative_keywords_impl(product_name, days),
+    )
+
+
+def _extract_negative_keywords_impl(product_name: str, days: int = 7) -> dict[str, Any]:
     product, reviews = _recent_reviews(product_name, days)
     if not product:
         return {"found": False, "message": f"未找到商品：{product_name}"}
@@ -97,3 +114,4 @@ def _top_words(sentences: list[str]) -> list[str]:
             if word in sentence:
                 counter[word] += 1
     return [word for word, _ in counter.most_common(3)]
+

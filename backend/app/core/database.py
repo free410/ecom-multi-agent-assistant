@@ -72,6 +72,5 @@ def get_db() -> Generator[Session | None, None, None]:
 def get_database_status() -> dict:
     return {
         "available": db_available,
-        "message": "ok" if db_available else db_error_message,
+        "message": "ok" if db_available else (db_error_message or "Database not initialized."),
     }
-
